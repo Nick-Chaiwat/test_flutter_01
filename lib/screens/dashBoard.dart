@@ -285,17 +285,50 @@ class _DashboardPageState extends State<DashboardPage> {
                               style: TextStyle(
                                   fontWeight: FontWeight.w800, fontSize: 10),
                             ),
-                            Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: []),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(top: 10, bottom: 10),
+                              child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Expanded(
+                                      child: CircleAvatar(
+                                        backgroundColor: Colors.blueAccent,
+                                        radius: 60,
+                                        child: CircleAvatar(
+                                          backgroundColor: Colors.white,
+                                          radius: 40,
+                                        ),
+                                      ),
+                                    ),
+                                    Expanded(
+                                        child: SizedBox(
+                                      height: 100,
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceEvenly,
+                                        children: [
+                                          grahpItem(Colors.amber, "30%",
+                                              ' Interview prep'),
+                                          grahpItem(Colors.blueAccent, "20%",
+                                              ' Ongoing edcation..'),
+                                          grahpItem(Colors.black38, "15%",
+                                              ' Other services'),
+                                        ],
+                                      ),
+                                    ))
+                                  ]),
+                            ),
                             const Divider(
                               height: 1,
                               thickness: 1,
                               color: Colors.black12,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 20,
                             ),
                             ElevatedButton(
@@ -612,4 +645,31 @@ class _DashboardPageState extends State<DashboardPage> {
           ),
         ));
   }
+}
+
+Widget grahpItem(Color color, var text1, text2) {
+  return Row(
+    children: [
+      Icon(
+        Icons.circle,
+        color: color,
+        size: 7,
+      ),
+      RichText(
+        text: TextSpan(
+          children: [
+            TextSpan(
+                text: "  " + text1,
+                style: const TextStyle(
+                    color: Colors.black, fontWeight: FontWeight.bold)),
+            TextSpan(
+                text: text2,
+                style: const TextStyle(
+                  color: Colors.black54,
+                )),
+          ],
+        ),
+      ),
+    ],
+  );
 }
