@@ -29,13 +29,13 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         backgroundColor: const Color.fromARGB(235, 51, 20, 224),
         body: PageView(
-          children: [
+          controller: pageController,
+          children: const [
             DashboardPage(),
             UserPage(),
             CalendarPage(),
             SettingPage()
           ],
-          controller: pageController,
         ),
         bottomNavigationBar: BottomNavBar(_selectedIndex, onTapped));
   }
