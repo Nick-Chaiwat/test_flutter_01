@@ -109,7 +109,7 @@ class _DashboardPageState extends State<DashboardPage> {
                           TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
                     ),
                     Container(
-                      margin: EdgeInsets.only(top: 10, bottom: 20),
+                      margin: const EdgeInsets.only(top: 10, bottom: 20),
                       width: 360,
                       height: 700,
                       decoration: BoxDecoration(
@@ -294,10 +294,318 @@ class _DashboardPageState extends State<DashboardPage> {
                               height: 1,
                               thickness: 1,
                               color: Colors.black12,
-                            )
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  fixedSize: const Size(360, 50),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(12)),
+                                  backgroundColor: const Color(
+                                      0xFF2F00F2), // Background color
+                                ),
+                                onPressed: () => {},
+                                child: const Text(
+                                  "Create invoice",
+                                  style: TextStyle(fontSize: 20),
+                                )),
+                            const SizedBox(
+                              height: 20,
+                            ),
+                            OutlinedButton(
+                                style: ElevatedButton.styleFrom(
+                                  fixedSize: const Size(360, 50),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(12)),
+                                ),
+                                onPressed: () => {},
+                                child: const Text(
+                                  "View all invoice",
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.black87),
+                                )),
                           ],
                         ),
                       ),
+                    ),
+                    const Text(
+                      "Clients",
+                      style:
+                          TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(top: 10, bottom: 20),
+                      width: 360,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.white),
+                      child: Padding(
+                          padding: const EdgeInsets.all(12.0),
+                          child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Container(
+                                      margin: const EdgeInsets.only(top: 30),
+                                      child: Column(
+                                        children: const [
+                                          Text(
+                                            "CLIENTS COUNT",
+                                            style: TextStyle(
+                                                fontSize: 10,
+                                                color: Colors.black54,
+                                                fontWeight: FontWeight.w500),
+                                          ),
+                                          Text(
+                                            "200",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.w800,
+                                                fontSize: 30),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      height: 130,
+                                      child: VerticalDivider(
+                                        color: Colors.black12,
+                                      ),
+                                    ),
+                                    Container(
+                                      margin: const EdgeInsets.only(top: 30),
+                                      child: Column(
+                                        children: const [
+                                          Text(
+                                            "AVG SESSIONS/CLIENT",
+                                            style: TextStyle(
+                                                fontSize: 10,
+                                                color: Colors.black54,
+                                                fontWeight: FontWeight.w500),
+                                          ),
+                                          Text(
+                                            "3",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.w800,
+                                                fontSize: 30),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const Divider(
+                                  height: 1,
+                                  thickness: 1,
+                                  color: Colors.black12,
+                                ),
+                                const SizedBox(
+                                  height: 30,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: const [
+                                    Text(
+                                      "TOP 5 COUNT",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 10,
+                                          color: Colors.black54),
+                                    ),
+                                    Text(
+                                      "SESSINS",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 10,
+                                          color: Colors.black54),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      children: const [
+                                        CircleAvatar(
+                                          backgroundImage: NetworkImage(
+                                              'https://picsum.photos/seed/picsum/200/300'),
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.only(left: 10),
+                                          child: Text(
+                                            "Alan Cooper",
+                                            style: TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.black54,
+                                                fontWeight: FontWeight.w500),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                    const Text(
+                                      "30",
+                                      style: TextStyle(
+                                          fontSize: 26,
+                                          color: Colors.black54,
+                                          fontWeight: FontWeight.w500),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      children: const [
+                                        CircleAvatar(
+                                          backgroundImage: NetworkImage(
+                                              'https://picsum.photos/seed/picsum/200/300'),
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.only(left: 10),
+                                          child: Text(
+                                            "Alan Cooper",
+                                            style: TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.black54,
+                                                fontWeight: FontWeight.w500),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                    const Text(
+                                      "30",
+                                      style: TextStyle(
+                                          fontSize: 26,
+                                          color: Colors.black54,
+                                          fontWeight: FontWeight.w500),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      children: const [
+                                        CircleAvatar(
+                                          backgroundImage: NetworkImage(
+                                              'https://picsum.photos/seed/picsum/200/300'),
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.only(left: 10),
+                                          child: Text(
+                                            "Alan Cooper",
+                                            style: TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.black54,
+                                                fontWeight: FontWeight.w500),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                    const Text(
+                                      "30",
+                                      style: TextStyle(
+                                          fontSize: 26,
+                                          color: Colors.black54,
+                                          fontWeight: FontWeight.w500),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      children: const [
+                                        CircleAvatar(
+                                          backgroundImage: NetworkImage(
+                                              'https://picsum.photos/seed/picsum/200/300'),
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.only(left: 10),
+                                          child: Text(
+                                            "Alan Cooper",
+                                            style: TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.black54,
+                                                fontWeight: FontWeight.w500),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                    const Text(
+                                      "30",
+                                      style: TextStyle(
+                                          fontSize: 26,
+                                          color: Colors.black54,
+                                          fontWeight: FontWeight.w500),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      children: const [
+                                        CircleAvatar(
+                                          backgroundImage: NetworkImage(
+                                              'https://picsum.photos/seed/picsum/200/300'),
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.only(left: 10),
+                                          child: Text(
+                                            "Alan Cooper",
+                                            style: TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.black54,
+                                                fontWeight: FontWeight.w500),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                    const Text(
+                                      "30",
+                                      style: TextStyle(
+                                          fontSize: 26,
+                                          color: Colors.black54,
+                                          fontWeight: FontWeight.w500),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 20,
+                                ),
+                              ])),
                     )
                   ]),
             ),
